@@ -1,5 +1,7 @@
 import React from 'react';
-import { useTheme } from '../theme';
+import { useSelector, useDispatch } from 'react-redux';
+import type { RootState } from '../store';
+import { setTheme } from '../store/modules/theme';
 import { Switch, Space, Typography } from 'antd';
 import { SunOutlined, MoonOutlined } from '@ant-design/icons';
 
@@ -14,8 +16,13 @@ export const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
   showLabel = true,
   showIcon = true,
 }) => {
-  const { theme, toggleTheme } = useTheme();
+  const dispatch = useDispatch();
+  const theme = useSelector((state: RootState) => state.theme.theme);
   const isDark = theme === 'dark';
+  
+  const toggleTheme = () => {
+    dispatch(setTheme(theme === 'light' ? 'dark' : 'light'));
+  };
 
   return (
     <Space>

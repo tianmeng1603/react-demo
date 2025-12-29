@@ -1,10 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store';
 import { Button, Space } from 'antd';
 import { ThemeSwitch } from '../../components/ThemeSwitch';
-import { useTheme } from '../../theme';
 
 const Layout = () => {
-  const { theme } = useTheme();
+  const theme = useSelector((state: RootState) => state.theme.theme);
   
   return (
     <div className="p-6 bg-white dark:bg-black min-h-screen">

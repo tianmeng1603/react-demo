@@ -62,15 +62,3 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   );
 };
 
-// Hook 用于在组件中使用主题
-export const useTheme = () => {
-  const dispatch = useDispatch();
-  const theme = useSelector((state: RootState) => state.theme.theme);
-
-  return {
-    theme,
-    setTheme: (newTheme: ThemeMode) => dispatch(setTheme(newTheme)),
-    toggleTheme: () => dispatch(setTheme(theme === 'light' ? 'dark' : 'light')),
-  };
-};
-
