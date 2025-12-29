@@ -1,11 +1,27 @@
-@tailwind base;
-@tailwind components;
+@tailwind base;        
+@tailwind components;  
 @tailwind utilities;
+
+/* 全局 CSS 变量 */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-border: #d9d9d9;
+}
+
+.dark {
+  --color-bg: #141414;
+  --color-text: #ffffff;
+  --color-border: #434343;
+}
 
 html,
 body {
-  margin: 0;
-  height: 100%;
+  margin: 0;                          /* 移除默认边距 */
+  height: 100%;                       /* 全屏高度 */
+  background-color: var(--color-bg);  /* 使用 CSS 变量设置背景 */
+  color: var(--color-text);           /* 使用 CSS 变量设置文字颜色 */
+  transition: background-color 0.3s ease, color 0.3s ease; /* 主题切换动画 */
 }
 
 #root {

@@ -10,7 +10,7 @@ import { AuthRoute } from '@/components/AuthRoute';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <AuthRoute><Layout /></AuthRoute>,
+    element: <Layout />,
     children: []
   },
   {
