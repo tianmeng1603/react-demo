@@ -15,3 +15,4 @@ export function AuthRoute({ children }: AuthRouteProps) {
         return <Navigate to="/login" replace />;
     }
 }
+

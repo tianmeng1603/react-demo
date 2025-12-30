@@ -2,9 +2,9 @@ import React, { useEffect, useMemo } from 'react';
 import { ConfigProvider, theme as antdTheme } from 'antd';
 import type { ThemeConfig } from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import type { RootState } from '../store';
-import { setTheme } from '../store/modules/theme';
-import { lightThemeColors, darkThemeColors } from './antdTheme';
+import type { RootState } from '@/store';
+import { setTheme } from '@/store/modules/theme';
+import { lightThemeColors, darkThemeColors } from '@/theme/antdTheme';
 
 // Tailwind 主题模式
 export type ThemeMode = 'light' | 'dark';

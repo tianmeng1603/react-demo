@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import type { RootState } from '../store';
-import { setTheme } from '../store/modules/theme';
+import type { RootState } from '@/store';
+import { setTheme } from '@/store/modules/theme';
 import { Switch, Space, Typography } from 'antd';
 import { SunOutlined, MoonOutlined } from '@ant-design/icons';
 
@@ -36,3 +36,4 @@ export const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
     </Space>
   );
 };
+
